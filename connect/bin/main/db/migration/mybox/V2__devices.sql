@@ -1,0 +1,25 @@
+CREATE TABLE `mybox`.`devices` (
+  `SerialNo` INT NOT NULL,
+  `Status` CHAR(1) NULL,
+  `MAC` VARCHAR(100) NOT NULL,
+  `OnLine` VARCHAR(45) NULL,
+  `OnLineDuration` DATETIME NULL,
+  `Group` VARCHAR(45) NULL,
+  `ModelNo` VARCHAR(45) NOT NULL,
+  `ModelName` VARCHAR(45) NULL,
+  `SoftwareVersion` VARCHAR(45) NULL,
+  `HardwareVersion` VARCHAR(45) NULL,
+  `CPUUsage` INT NULL,
+  `MemoryUsage` INT NULL,
+  `StorageUsage` INT NULL,
+  `AudioMode` VARCHAR(45) NULL COMMENT 'VARCHAR(45)',
+  `Resolution` VARCHAR(45) NULL,
+  `LastOffline` DATETIME NULL,
+  `LastOnline` DATETIME NULL,
+  `ActiveTime` DATETIME NULL,
+  `UDPaddress` VARCHAR(45) NULL,
+  `TimeZone` DATETIME NULL,
+  PRIMARY KEY (`SerialNo`, `MAC`),
+  UNIQUE INDEX `MAC_UNIQUE` (`MAC` ASC));
+
+ALTER TABLE devices ADD FOREIGN KEY (ModelNo) REFERENCES model(ModelNo);

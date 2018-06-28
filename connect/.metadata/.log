@@ -1,0 +1,90 @@
+!SESSION 2018-06-26 14:55:59.239 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data C:\cloud\MyBox\mybox\connect -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.recommenders.apidocs.rcp 4 0 2018-06-26 14:56:31.735
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.apidocs.rcp [318]
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.apidocs; bundle-version="2.0.0"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.apidocs; bundle-version="2.1.9.v20140917-1240"
+       org.eclipse.recommenders.apidocs [317]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.1.9.v20140917-1240"
+              org.eclipse.recommenders.models [326]
+                Unresolved requirement: Import-Package: org.apache.maven.repository.internal; version="[3.1.0,3.2.0)"
+                  -> Export-Package: org.apache.maven.repository.internal; bundle-symbolic-name="org.eclipse.aether.maven"; bundle-version="3.1.0.v20140706-2237"; version="3.1.0"; uses:="com.google.inject,javax.inject,org.eclipse.aether,org.eclipse.aether.artifact,org.eclipse.aether.deployment,org.eclipse.aether.impl,org.eclipse.aether.installation,org.eclipse.aether.repository,org.eclipse.aether.resolution,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log"
+                     org.eclipse.aether.maven [50]
+                       Unresolved requirement: Import-Package: org.eclipse.aether; version="[0.9.1,1.1.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.models 4 0 2018-06-26 14:56:31.764
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.models [326]
+  Unresolved requirement: Import-Package: org.apache.maven.repository.internal; version="[3.1.0,3.2.0)"
+    -> Export-Package: org.apache.maven.repository.internal; bundle-symbolic-name="org.eclipse.aether.maven"; bundle-version="3.1.0.v20140706-2237"; version="3.1.0"; uses:="com.google.inject,javax.inject,org.eclipse.aether,org.eclipse.aether.artifact,org.eclipse.aether.deployment,org.eclipse.aether.impl,org.eclipse.aether.installation,org.eclipse.aether.repository,org.eclipse.aether.resolution,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log"
+       org.eclipse.aether.maven [50]
+         Unresolved requirement: Import-Package: org.eclipse.aether; version="[0.9.1,1.1.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-06-26 14:56:45.959
+!MESSAGE Project facet jst.web has not been defined. It is used in plugin org.eclipse.jst.j2ee.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-06-26 14:56:45.991
+!MESSAGE Project facet jst.webfragment has not been defined. It is used in plugin org.eclipse.jst.j2ee.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-06-26 14:56:49.216
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\shiva'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.buildship.core 4 0 2018-06-26 14:58:56.824
+!MESSAGE Synchronize Gradle projects with workspace failed due to an error configuring Eclipse.
+!STACK 0
+org.eclipse.buildship.core.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.workspace.internal.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.addNewEclipseProjectToWorkspace(SynchronizeGradleBuildOperation.java:287)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeNonWorkspaceProject(SynchronizeGradleBuildOperation.java:270)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeGradleProjectWithWorkspaceProject(SynchronizeGradleBuildOperation.java:179)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.access$000(SynchronizeGradleBuildOperation.java:99)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation$1.run(SynchronizeGradleBuildOperation.java:134)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.synchronizeProjectsWithWorkspace(SynchronizeGradleBuildOperation.java:131)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildOperation.run(SynchronizeGradleBuildOperation.java:115)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.synchronizeBuild(SynchronizeGradleBuildsJob.java:85)
+	at org.eclipse.buildship.core.workspace.internal.SynchronizeGradleBuildsJob.runToolingApiJob(SynchronizeGradleBuildsJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob$1.run(ToolingApiJob.java:73)
+	at org.eclipse.buildship.core.util.progress.ToolingApiInvoker.invoke(ToolingApiInvoker.java:62)
+	at org.eclipse.buildship.core.util.progress.ToolingApiJob.run(ToolingApiJob.java:70)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:175)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:287)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:269)
+	at org.eclipse.buildship.core.workspace.internal.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 15 more

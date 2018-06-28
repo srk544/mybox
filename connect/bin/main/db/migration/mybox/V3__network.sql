@@ -1,0 +1,19 @@
+CREATE TABLE `mybox`.`network` (
+  `AssignedAddressMethod` INT NULL,
+  `IP` VARCHAR(100) NULL,
+  `DNS` VARCHAR(100) NULL,
+  `GateWay` VARCHAR(100) NULL,
+  `SubNetMask` VARCHAR(45) NULL,
+  `MAC` VARCHAR(100) NULL,
+  `MacOverRide` VARCHAR(100) NULL,
+  `SupportIPV6` VARCHAR(100) NULL,
+  `NetworkConnectMode` VARCHAR(100) NULL,
+  `SSIDEncryptMode` VARCHAR(100) NULL,
+  `SSIDName` VARCHAR(100) NULL,
+  `WIFISignal` VARCHAR(100) NULL,
+  `WIFILinkSpeed` VARCHAR(50) NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`Id`)
+  );
+
+ALTER TABLE network ADD FOREIGN KEY (MAC) REFERENCES devices(MAC);
